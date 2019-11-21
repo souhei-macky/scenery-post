@@ -3,8 +3,35 @@
     Scenery-photo -景色棚-
   .header__right
     ログイン機能    など
-.main
-  
 
+.main-content
+  .main-content__title
+    あなたの最高の一枚を…
+  .main-content__text
+    Scenery-photo  -景色棚-  は、景色限定で写真を投稿・閲覧できるサービスです
+  .main-content__btn
+    = link_to new_post_path do
+      .main-content__btn__path
+        投稿ページへ
+.card-section
+  .card-section-title
+    景色のジャンル別人気第1位の写真はこちら
+  .card-list
+    .card-list__item
+      .card-list__item__title
+        自然部門
+      .card-item__image
+
+    .card-list__item
+      .card-list__item__title
+        都市部門
+      .card-item__image
+        
+    .card-list__item
+      .card-list__item__title
+        イベント部門
+      .card-item__image
 
 .footer
+  .footer__message
+    Meeting new photos is waiting…
