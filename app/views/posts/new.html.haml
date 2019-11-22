@@ -1,0 +1,26 @@
+.main
+  .form
+    = form_for (@post) do |f|
+      .form__title
+
+      .form__name
+        1.写真のジャンル…
+      .form__btn
+        = f.radio_button :genre,:nature, class: :form__btn__genre
+        自然風景
+        = f.radio_button :genre,:city, class: :form__btn__genre
+        都市風景
+        = f.radio_button :genre,:ivent, class: :form__btn__genre
+        イベント風景
+      .form__input
+        .form__input__name
+          2.タイトルを決めましょう
+        = f.text_field :title, class: :form__input__title, placeholder: 'type a title'
+        .form__input__name
+          3.あなたの Best shot
+        = f.file_field :image, class: :form__input__image
+        .form__input__name
+          4.写真の思入れを書きましょう
+        = f.text_area :text, class: :form__input__text, placeholder: 'type a memory'
+        = f.submit '投稿する', class: :form__input__submit
+        
