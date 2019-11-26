@@ -13,4 +13,8 @@
         = link_to edit_user_path(current_user) do
           .header__right__btn__color
             user edit
-    
+    .header__right__mybtn
+      - if user_signed_in?
+        = link_to user_path(current_user.id) do
+          .header__right__mybtn__color
+            my page

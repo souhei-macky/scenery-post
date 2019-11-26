@@ -19,6 +19,22 @@ class PostsController < ApplicationController
     @posts = Post.where(genre_id: params[:id])
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params) if post.user_id == current_user.id
+    redirect_to user_path(current_user.id)
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to user_path(current_user.id)
+  end
+
   private
   def post_params
     params.require(:post).permit(:genre_id, :title, :image, :text).merge(user_id: current_user.id)

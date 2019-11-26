@@ -4,6 +4,9 @@
       .content__title
         タイトル：
         = post.title
+      .content__name
+        投稿者：
+        = post.user.name
       .content__image
         = image_tag post.image
       .content__text

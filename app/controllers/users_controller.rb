@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+  def show
+    @name = current_user.name
+    @posts = current_user.posts
+  end
+
   def edit
   end
 
@@ -10,6 +15,8 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+
 
   private
 
