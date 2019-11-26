@@ -11,5 +11,6 @@
     .header__right__btn
       - if user_signed_in?
         = link_to edit_user_path(current_user) do
-          user edit
+          .header__right__btn__color
+            user edit
     

@@ -19,6 +19,19 @@
   &__right {
     font-size: 15px;
     padding-right: 90px;
+    font-family: Neucha,cursive;
+    display: flex;
+    color: #444444 !important;
+    &__name {
+      padding: 20px;
+    }
+    &__btn {
+      font-size: 20px;
+      padding-top: 15px;
+      &__color {
+        color: #444444 !important;
+      }
+    }
   }
 }
 .main-content {

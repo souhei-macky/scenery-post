@@ -9,7 +9,10 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to root_path
+    @posts = Post.all.order(created_at: :desc)
+    @post = @posts[0]
+    @genre = @post.genre_id
+    redirect_to post_path(@genre)
   end
 
   def show
@@ -18,7 +21,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:genre_id, :title, :image, :text)
+    params.require(:post).permit(:genre_id, :title, :image, :text).merge(user_id: current_user.id)
   end
 
 end
