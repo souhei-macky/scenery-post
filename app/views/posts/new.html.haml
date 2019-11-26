@@ -2,15 +2,15 @@
   .form
     = form_for (@post) do |f|
       .form__title
-
+        こちらのフォームで投稿してみよう！
       .form__name
         1.写真のジャンル…
       .form__btn
-        = f.radio_button :genre,:nature, class: :form__btn__genre
+        = f.radio_button :genre_id,1, class: :form__btn__genre
         自然風景
-        = f.radio_button :genre,:city, class: :form__btn__genre
+        = f.radio_button :genre_id,2, class: :form__btn__genre
         都市風景
-        = f.radio_button :genre,:ivent, class: :form__btn__genre
+        = f.radio_button :genre_id,3, class: :form__btn__genre
         イベント風景
       .form__input
         .form__input__name
@@ -23,4 +23,5 @@
           4.写真の思入れを書きましょう
         = f.text_area :text, class: :form__input__text, placeholder: 'type a memory'
         = f.submit '投稿する', class: :form__input__submit
-        
+
+

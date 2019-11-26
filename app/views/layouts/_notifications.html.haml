@@ -1,0 +1,15 @@
+.header
+  = link_to root_path do
+    .header__left
+      Scenery-photo -景色棚-
+  .header__right
+    .header__right__name
+      - if user_signed_in?
+        = current_user.name
+      - else
+        未ログイン
+    .header__right__btn
+      - if user_signed_in?
+        = link_to edit_user_path(current_user) do
+          user edit
+    

@@ -1,8 +1,4 @@
-.header
-  .header__left
-    Scenery-photo -景色棚-
-  .header__right
-    ログイン機能    など
+
 
 .main-content
   .main-content__title
@@ -18,19 +14,22 @@
     景色のジャンル別人気第1位の写真はこちら
   .card-list
     .card-list__item
-      .card-list__item__title
-        自然部門
-      .card-item__image
+      = link_to post_path(1) do
+        .card-list__item__title
+          自然部門
+        .card-item__image
 
     .card-list__item
-      .card-list__item__title
-        都市部門
-      .card-item__image
+      = link_to post_path(2) do
+        .card-list__item__title
+          都市部門
+        .card-item__image
         
-    .card-list__item
-      .card-list__item__title
-        イベント部門
-      .card-item__image
+    .card-list__item    
+      = link_to post_path(3) do
+        .card-list__item__title
+          イベント部門
+        .card-item__image
 
 .footer
   .footer__message
