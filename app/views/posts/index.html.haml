@@ -1,34 +1,49 @@
 
-.main-content
-  .main-content__title
-    あなたの最高の一枚を…
-  .main-content__text
-    Scenery-photo  -景色棚-  は、景色限定で写真を投稿・閲覧できるサービスです
-  .main-content__btn
-    = link_to new_post_path do
-      .main-content__btn__path
-        投稿ページへ
+.wrapper 
+  %iframe{:allow => "accelerometer; autoplay; loop; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/u9eFAxZuK4g", :width => "560"}
+  .main-content
+    .main-content__title
+      あなたの最高の一枚を…
+    .main-content__text
+      Scenery-photo  -景色棚-  は、景色限定で写真を投稿・閲覧できるサービスです
+    .main-content__btn
+      = link_to new_post_path do
+        .main-content__btn__path
+          投稿ページへ
 .card-section
   .card-section-title
-    景色のジャンル別人気第1位の写真はこちら
+    見たい景色のジャンルの文字を選択！
   .card-list
-    .card-list__item
+    .card-list__item1
       = link_to post_path(1) do
-        .card-list__item__title
+        .card-list__item1__title
           自然部門
-        .card-item__image
-
-    .card-list__item
+    .card-list__item2
       = link_to post_path(2) do
-        .card-list__item__title
+        .card-list__item2__title
           都市部門
-        .card-item__image
-        
-    .card-list__item    
+    .card-list__item3
       = link_to post_path(3) do
-        .card-list__item__title
+        .card-list__item3__title
           イベント部門
-        .card-item__image
+.card-section
+  .card-section-title
+    全景色人気ランキングTOP3！
+  .ranks
+    - @rank.each do |post|
+      .ranks__rank
+        .ranks__rank__title
+          タイトル：
+          = post.title
+        .ranks__rank__name
+          投稿者：
+          = post.user.name
+        .ranks__rank__like
+          = icon('far', 'thumbs-up')
+          = post.likes.count
+        .ranks__rank__image
+          = image_tag post.image
+        
 
 .footer
   .footer__message

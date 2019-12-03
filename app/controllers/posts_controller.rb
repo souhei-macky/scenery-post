@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @rank = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
   end
 
   def new
@@ -17,6 +17,9 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.where(genre_id: params[:id])
+    @like = Like.new
+    
+    
   end
 
   def edit

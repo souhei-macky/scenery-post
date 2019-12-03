@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
   &__left {
     font-size: 20px;
     font-weight: bold;
@@ -41,9 +42,32 @@
     }
   }
 }
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-top: -10%;
+}
+.wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
 .main-content {
-  height: 600px;
-  background-image: url(https://nozziedesign.com/wp-content/uploads/2014/12/ccccccc.jpg);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 60%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  
+  // background: radial-gradient(ellipse at center, rgba(255,255,255,0) 40%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,1) 100%),url(https://nozziedesign.com/wp-content/uploads/2014/12/ccccccc.jpg);
+  //background-image: url(https://nozziedesign.com/wp-content/uploads/2014/12/ccccccc.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -54,7 +78,6 @@
   flex-direction: column;
   font-weight: bold;
   color: #FFFFE0;
-  margin-top: 60px;
   &__title {
     font-size: 30px;
     margin-bottom: 10px;
@@ -92,30 +115,80 @@ a {
 
 
 .card-section {
+  font-style: italic;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-image: -webkit-linear-gradient(top, #A3A29E 0%, #B1B0AC 27%, #BCBBB7 49%, #E5E4E0 76%, #F3F2F0 100%);
   background-image: linear-gradient(to bottom, #A3A29E 0%, #B1B0AC 27%, #BCBBB7 49%, #E5E4E0 76%, #F3F2F0 100%);
+  padding-bottom: 50px;
 }
 .card-section-title {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  padding:40px 0;
-  color:#EEEEEE;
+  padding:30px 0;
+  color:#333333;
+  background: linear-gradient(transparent 5%, #C2EEFF 70%);
+  margin-bottom: 10px;
 }
 .card-list {
-  width: 1100px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
-  &__item {
-    width: 320px;
-    border: 1px solid #152a5c;
+  font-size: 25px;
+  &__item1 {
+    width: 400px;
     height: 320px;
+    background-image: url(https://shizennoie.karuizawa-town.com/images/siraitonotaki.jpg?crc=156970983);
+    background-size:cover;
+    background-position: center;
+    border: 1px solid #152a5c;
     &__title {
       text-align: center;
       padding: 5px;
+      color: white !important;
+    }
+  }
+  &__item2 {
+    width: 400px;
+    height: 320px;
+    background-image: url(https://ma-net.jp/imgs/images.ma-net.jp/card-loan/articles/1667/gahag-0100855534-1.jpg.pagespeed.ce.s2gOXEkPlZ.jpg);
+    background-size:cover;
+    background-position: center;
+    border: 1px solid #152a5c;
+    &__title {
+      text-align: center;
+      padding: 5px;
+      color: white !important;
+    }
+  }
+  &__item3 {
+    width: 400px;
+    height: 320px;
+    background-image: url(https://sp.jorudan.co.jp/hanabi/images/spot/640/J0178_1.jpg);
+    background-size:cover;
+    background-position: center;
+    border: 1px solid #152a5c;
+    &__title {
+      text-align: center;
+      padding: 5px;
+      color: white !important;
+    }
+  }
+}
+.ranks {
+  padding: 20px 0;
+  overflow: hidden;
+  &__rank {
+    text-align: center;
+    color: white;
+    &__image{
+      margin: 0 auto;
+      display: inline-block;
+    }
+    &__like {
+      color: red;
     }
   }
 }
@@ -132,3 +205,5 @@ a {
     text-align: center;
   }
 }
+
+

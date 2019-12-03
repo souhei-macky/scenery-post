@@ -1,0 +1,17 @@
+.user-main
+  .persons
+    ユーザー一覧
+    - @users.each do |user|
+      .person
+      = user.id
+      = user.name
+      = user.email
+  .person_likes
+    -# いいねした投稿
+    -# - @user.liked_posts.each do |post| 
+    -#   = post.user.name
+    -#   = post.title 
+.link
+  = link_to root_path do
+    トップページへ戻る
+      

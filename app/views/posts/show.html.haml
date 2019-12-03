@@ -12,3 +12,17 @@
       .content__text
         写真のストーリー：
         = post.text
+      .content__like
+        .content__like__count
+          -if current_user.already_liked?(post)
+            = icon('far', 'thumbs-down')
+            = button_to '取り消す', post_like_path(post), method: :delete
+          - else
+            = icon('far', 'thumbs-up')
+            = button_to 'いいね', post_likes_path(post)
+          = post.likes.count
+        .content__like__users
+          - post.liked_users.each do |user|
+            ・
+            = user.name
+
