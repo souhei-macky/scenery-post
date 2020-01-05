@@ -18,8 +18,6 @@ class PostsController < ApplicationController
   def show
     @posts = Post.where(genre_id: params[:id])
     @like = Like.new
-    
-    
   end
 
   def edit
