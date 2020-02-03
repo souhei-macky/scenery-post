@@ -12,11 +12,11 @@
       .content__operation
         .content__operation__edit
           - if user_signed_in? && current_user.id == post.user_id
-            = link_to edit_post_path(post.id), method: :get do
+            = link_to edit_post_path(post) do
               edit
         .content__operation__destroy
           - if user_signed_in? && current_user.id == post.user_id
-            = link_to post_path(post.id), method: :delete do
+            = link_to post_path(post), method: :delete, data: {confirm: "削除してもよろしいですか？"} do
               delete
       .content__like
         .content__like__count

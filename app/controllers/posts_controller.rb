@@ -18,8 +18,6 @@ class PostsController < ApplicationController
   def show
     @posts = Post.where(genre_id: params[:id])
     @like = Like.new
-    
-    
   end
 
   def edit
@@ -34,6 +32,7 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
+    binding.pry
     post.destroy
     redirect_to user_path(current_user.id)
   end
