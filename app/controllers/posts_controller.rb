@@ -32,7 +32,6 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
-    binding.pry
     post.destroy
     redirect_to user_path(current_user.id)
   end
