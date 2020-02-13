@@ -1,4 +1,7 @@
 # README
+どのように反映されるかの検証
+
+；
 
 # scenery-post DB設計
 
