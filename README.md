@@ -1,7 +1,6 @@
-# README
+# トップページ
 
-![スクリーンショット 2020-02-20 16 30 52](https://user-images.githubusercontent.com/57378304/74910796-ac8de380-53fe-11ea-8d7f-5fee25caa27f.png)
-
+![image](https://user-images.githubusercontent.com/57378304/74911995-1b6c3c00-5401-11ea-8055-409f7b6eda4b.png)
 
 # URL
 
