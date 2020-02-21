@@ -4,7 +4,7 @@
 
 # アプリ名 scenery-post
 ruby on ralis のフレームワークを利用し、景色を投稿するアプリを作成致しました。
-アプリケーションの名前は景色（scenery）を投稿（post）するというシンプルな理由で付けました。  
+アプリケーションの名前は景色（scenery）を投稿（post）するというシンプルな理由で付けました。  デプロイはherokuを利用しています
 
 
 
@@ -30,7 +30,7 @@ ruby on ralis のフレームワークを利用し、景色を投稿するアプ
 ### -投稿のジャンル別詳細-
 投稿を景色のジャンル別にページを振り分けました。方法は投稿にgenre_idを付与し、pathにgenre_idを利用しました。この機能の実装理由は景色好きにみたいジャンルの景色を閲覧して欲しいためです。
 
-```ruby:posts_controller.rb
+```ruby:app/controllers/posts_controller.rb
   def show
     @posts = Post.where(genre_id: params[:id])
     ## genre_id()を持つ投稿を取得
