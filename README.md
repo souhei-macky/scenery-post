@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/57378304/74911995-1b6c3c00-5401-11ea-8055-409f7b6eda4b.png)
 
-# アプリ名 scenery-post
+## アプリ名 scenery-post
 ruby on ralis のフレームワークを利用し、景色を投稿するアプリを作成致しました。
 アプリケーションの名前は景色（scenery）を投稿（post）するというシンプルな理由で付けました。  デプロイはherokuを利用しています
 
@@ -14,7 +14,7 @@ ruby on ralis のフレームワークを利用し、景色を投稿するアプ
 
 
 ## URL
-### https://scenery-post.herokuapp.com/
+#### https://scenery-post.herokuapp.com/
 
 
 ## 実装機能
