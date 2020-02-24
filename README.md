@@ -62,7 +62,8 @@ ruby on ralis のフレームワークを利用し、景色を投稿するアプ
   });
  ```
 
- ![image](https://i.gyazo.com/b178abad123c2be32376f19d554115e7.mp4)
+ ![rank-slider mp4](https://user-images.githubusercontent.com/57378304/75137702-a021c780-572b-11ea-8fba-c06c5515b794.gif)
+
 
 
 
