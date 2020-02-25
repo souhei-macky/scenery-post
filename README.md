@@ -27,7 +27,9 @@ ruby on ralis のフレームワークを利用し、景色を投稿するアプ
 #### スライドショー機能
 
 ## 工夫した点
-### -投稿のジャンル別詳細-
+<div align= "center">
+  <h3>-投稿のジャンル別詳細-</h3>
+</div>
 投稿を景色のジャンル別にページを振り分けました。方法は投稿にgenre_idを付与し、pathにgenre_idを利用しました。この機能の実装理由は景色好きにみたいジャンルの景色を閲覧して欲しいためです。
 
 ```ruby:app/controllers/posts_controller.rb
@@ -39,7 +41,9 @@ ruby on ralis のフレームワークを利用し、景色を投稿するアプ
 
 ![image](https://user-images.githubusercontent.com/57378304/75004666-34332b00-54af-11ea-8b25-c60f23ecdccf.png)
 
- ### -ランキング機能-
+ <div align= "center">
+  <h3>-ランキング機能-</h3>
+</div>
  いいねの多い投稿を上位3つのみトップページの最後に表示させました。表示はスライダーで動きを付けました。
  方法はorder('count(post_id) desc')でいいねが多い投稿をlimit(3)を指定し3つ持ってくる記述をしました。
  この機能の実装理由はより綺麗な景色を閲覧してもらうためです。
