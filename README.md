@@ -16,6 +16,18 @@ ruby on ralis のフレームワークを利用し、景色を投稿するアプ
 ## URL
 #### https://scenery-post.herokuapp.com/
 
+## テストユーザー
+
+<ul>
+  <li>
+    テストユーザー: sample
+    <ul>
+      <li>✉️メールアドレス: sanple@gmail.com</li>
+      <li>🔑パスワード:1111aaaa
+    </ul>
+  </li>
+</ul>
+
 
 ## 実装機能
 #### ログイン機能
